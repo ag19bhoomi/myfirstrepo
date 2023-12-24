@@ -37,7 +37,7 @@ class Hero
 
 int main()
 {
-	//creation of object
+	//static allocation
         Hero a;
 	a.setHealth(85);
 	a.setLevel('B');
