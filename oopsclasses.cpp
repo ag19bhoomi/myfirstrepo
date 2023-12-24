@@ -4,10 +4,17 @@ using namespace std;
 class hero
 {
   //properties
-  
+   public:                    //they can be used outside class
 	int health;
+   private:                    //they can only be used inside class
 	char name[10];
-	float height;
+	
+	void print()
+	{
+		cout<<name<<endl;
+	}
+
+
 };
 
 int main()
@@ -15,7 +22,7 @@ int main()
 	//creation of object
 	hero h1;
 
-	cout <<"size is: "<<sizeof(h1) << endl;
+	cout <<"health is: "<<h1.health<<endl;
 
 	return 0;
 }
