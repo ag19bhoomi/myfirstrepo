@@ -38,14 +38,21 @@ class Hero
 int main()
 {
 	//creation of object
-        Hero thor;
-	cout << "thor health is: "<<thor.getHealth() << endl;
-	//use setter
-	thor.setHealth(90);
-	thor.level='A';
+        Hero a;
+	a.setHealth(85);
+	a.setLevel('B');
+	cout << "level is: "<< a.level << endl;
+	cout << "health is: "<< a.getHealth() << endl;
+	//dynamically 
+	Hero *b = new Hero;
+	b->setLevel('A');
+	b->setHealth(90);
+	cout << "level is: " << (*b).level << endl;
+	cout << "health is: "<< (*b).getHealth() << endl;
 
-	cout<<"health is: "<<thor.getHealth()<<endl;
-	cout<<"level is: "<<thor.level<<endl;
+
+	cout << "level is: "<< b->level << endl;
+	cout << "health is: "<< b->getHealth() << endl;
 
 		return 0;
 }
