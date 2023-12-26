@@ -11,7 +11,7 @@ class Hero
 		
 		Hero()
 		  {
-			  cout<<"constructor called"<<endl;
+			  cout<<"Simple constructor called"<<endl;
 		  }
 
 
@@ -29,7 +29,8 @@ class Hero
 		 }
 		void print()
 		{
-			cout<<level<<endl;
+			cout<<"Health is: "<<this ->health<<endl;
+			cout<<"Level: "<<this->level<<endl;
 		}
 
 		int getHealth()
@@ -56,6 +57,14 @@ class Hero
 
 int main()
 {
+
+	Hero s(70, 'A');
+		s.print();
+
+	Hero R(s);
+		R.print();
+
+	/*
 	//static allocation
         Hero a(20);
        //cout << "address of a: "<< &a<< endl;
@@ -67,5 +76,5 @@ int main()
 
 	Hero temp(22, 'B');
 	temp.print();
-	
+	*/
 return 0;}
