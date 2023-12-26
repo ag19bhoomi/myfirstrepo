@@ -9,6 +9,8 @@ class Hero
 	public:
 		char level;
 		char *name;
+		static int time;
+
 
                   
 		
@@ -81,6 +83,10 @@ class Hero
 		{
 			strcpy(this->name,name);
 		}
+		static int random()
+		{
+			return time;
+		}
 
 		//Destructor
 		~Hero()
@@ -91,9 +97,36 @@ class Hero
 
 };
 
-int main()
-{
+int Hero :: time = 5;
 
+int main()
+{      
+	//static member shout be use like this
+	cout << Hero::time<<endl;
+
+  
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
 	//static
 	Hero a;
 
@@ -102,27 +135,8 @@ int main()
 	
 	//call destructor manually
 	delete b;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*	//understanding shallow copy
-	
 
+	//understanding shallow copy
 	Hero hero1;
 	hero1.setHealth(10);
 	hero1.setLevel('A');
