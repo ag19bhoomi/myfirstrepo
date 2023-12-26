@@ -27,6 +27,14 @@ class Hero
 			 this -> health = health;
 
 		 }
+		 //copy contructor made by user
+		 Hero(Hero& temp)
+		 {
+			 cout<<"copy constructor called"<<endl;
+			 this ->health = temp.health;
+			 this ->level = temp.level;
+		 }
+
 		void print()
 		{
 			cout<<"Health is: "<<this ->health<<endl;
@@ -58,9 +66,11 @@ class Hero
 int main()
 {
 
+	
 	Hero s(70, 'A');
 		s.print();
 
+	//copy constructor
 	Hero R(s);
 		R.print();
 
