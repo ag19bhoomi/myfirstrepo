@@ -35,14 +35,19 @@ class Hero
 		 
 		 
 		 //copy contructor made by user
-		 /*
+		 //deep copy 
 		  Hero(Hero& temp)
 		 {
+			 char *ch = new char[strlen(temp.name) +1];
+			 strcpy(ch,temp.name);
+			 this ->name = ch;
+
+
 			 cout<<"copy constructor called"<<endl;
 			 this ->health = temp.health;
 			 this ->level = temp.level;
 		 }
-                  */
+                  
 
 
 		void print()
