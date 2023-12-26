@@ -35,7 +35,7 @@ class Hero
 		 
 		 
 		 //copy contructor made by user
-		 //deep copy 
+		 //deep copyi 
 		  Hero(Hero& temp)
 		 {
 			 char *ch = new char[strlen(temp.name) +1];
@@ -82,11 +82,45 @@ class Hero
 			strcpy(this->name,name);
 		}
 
+		//Destructor
+		~Hero()
+		{
+		cout << "Destructor called"<<endl;
+	        }
+	
+
 };
 
 int main()
 {
-	//understanding shallow copy
+
+	//static
+	Hero a;
+
+	//dynamically
+          Hero *b = new Hero();
+	
+	//call destructor manually
+	delete b;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*	//understanding shallow copy
 	
 
 	Hero hero1;
@@ -106,35 +140,6 @@ int main()
 	hero1.name[0] ='G';
 	hero1.print();
 
-	hero2.print();
-
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	Hero s(70, 'A');
-		s.print();
-
-	//copy constructor
-	Hero R(s);
-		R.print();
-
-	
-	//static allocation
-        Hero a(20);
-       //cout << "address of a: "<< &a<< endl;
-         a.print();
-
-	//dynamically 
-	Hero *h = new Hero(20);
-        h->print();
-
-	Hero temp(22, 'B');
-	temp.print();
-	*/
+	hero2.pint();
+		*/
 return 0;}
