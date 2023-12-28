@@ -30,7 +30,7 @@ class Human
 		}
 
 };
-class Male: public Human {
+class Male: protected Human {
 	public:
 		string color;
 
@@ -38,13 +38,38 @@ class Male: public Human {
 		{
 			cout<<"male sleeping"<<endl;
 		}
+
+	// in case of public variable and protected class it can only be used inside the class
+		int getHeight()
+		{
+			return this->height;
+		}
 };
 
 int main()
 {
+	Male m1;
+	cout<<m1.getHeight()<<endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* when class and variable both are marked public
   Male m1;
   cout<< m1.height<< endl;
-
+*/
 
 
 
