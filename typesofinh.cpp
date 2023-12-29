@@ -3,55 +3,54 @@
  2. Multi-level inheritance:
  3. Multiple ineritance:
  4. Hicrarchical inheritance:
+ 5. Hybrid Inheritance:
  */
 
-//Example of hicrarchical inheritance:
+//Example of hybrid inheritance:
 
 #include <iostream>
 using namespace std;
 
-class A
+
+//parent class 1:
+class vehicle 
 {
 	public:
-		void func1()
+		 vehicle()
 		{
-			cout << "inside function 1" << endl;
+			cout << "this is a vehicle" << endl;
 		}
 };
 
-
-class B: public A
+//parent class 2:
+class fare
 {
 	public: 
-		void func2()
+		fare()
 		{
-			cout << "inside function 2" <<endl;
+			cout << "Fare of vehicle" <<endl;
 		}
 };
 
-class C: public A
+//child class:
+class car: public vehicle
 {
-	
-	public: 
-		void func3()
-		{
-			cout << "inside function 3" <<endl;
-		}
+
 };
 
+//child class 2:
+class bus: public vehicle, public fare
+{
+};
 
+//main function:
 int main()
 {
-       A object1;
-       object1.func1();
+       //creating object of sub class will
+       //invoke the contructor of base class.
+       bus obj2;
 
-       B object2;
-       object2.func1();
-       object2.func2();
- 
-       C object3;
-       object3.func1();
-       object3.func3();
+       
 
 
 	
