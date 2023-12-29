@@ -2,51 +2,57 @@
  1. Single inheritance:
  2. Multi-level inheritance:
  3. Multiple ineritance:
+ 4. Hicrarchical inheritance:
  */
 
-//Example of multiple inheritance:
+//Example of hicrarchical inheritance:
 
 #include <iostream>
 using namespace std;
 
-class Animal
+class A
 {
-	public: 
-		int age;
-		int weight;
-
-
-
 	public:
-		void bark()
+		void func1()
 		{
-			cout << "barking" << endl;
+			cout << "inside function 1" << endl;
 		}
 };
 
 
-class Human
+class B: public A
 {
 	public: 
-		string color;
-
-	public: 
-		void speak()
+		void func2()
 		{
-			cout << "speaking" <<endl;
+			cout << "inside function 2" <<endl;
 		}
 };
 
-class hybrid: public Animal , public Human 
+class C: public A
 {
+	
+	public: 
+		void func3()
+		{
+			cout << "inside function 3" <<endl;
+		}
 };
 
 
 int main()
 {
-	hybrid obj1;
-	obj1.speak();
-	obj1.bark();
+       A object1;
+       object1.func1();
+
+       B object2;
+       object2.func1();
+       object2.func2();
+ 
+       C object3;
+       object3.func1();
+       object3.func3();
+
 
 	
 	return 0;
