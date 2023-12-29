@@ -3,7 +3,7 @@
  *There is a parent class and a sub/child class.
  * in mode of access: you cant acces any private variable in public class.
  *Private data member of any class is not accessible.
-*/
+ */
 
 //Implimentation:
 
@@ -30,7 +30,7 @@ class Human
 		}
 
 };
-class Male: protected Human {
+class Male: private Human {
 	public:
 		string color;
 
@@ -39,7 +39,7 @@ class Male: protected Human {
 			cout<<"male sleeping"<<endl;
 		}
 
-	// in case of public variable and protected class it can only be used inside the class
+// in case of public variable and protected or private class it can only be used inside the class
 		int getHeight()
 		{
 			return this->height;
