@@ -1,9 +1,10 @@
 /*********************Types of INHERITANCE***************
  1. Single inheritance:
  2. Multi-level inheritance:
+ 3. Multiple ineritance:
  */
 
-//Example of multi-level inheritance:
+//Example of multiple inheritance:
 
 #include <iostream>
 using namespace std;
@@ -17,27 +18,35 @@ class Animal
 
 
 	public:
-		void speak()
+		void bark()
 		{
-			cout << "speaking: " << endl;
+			cout << "barking" << endl;
 		}
 };
 
 
-class Dog: public Animal
+class Human
 {
-	
-};
-class Lebra: public Dog
-{
+	public: 
+		string color;
 
+	public: 
+		void speak()
+		{
+			cout << "speaking" <<endl;
+		}
 };
+
+class hybrid: public Animal , public Human 
+{
+};
+
 
 int main()
 {
-	Lebra l;
-	l.speak();
-	cout<< l.age<<endl;
+	hybrid obj1;
+	obj1.speak();
+	obj1.bark();
 
 	
 	return 0;
