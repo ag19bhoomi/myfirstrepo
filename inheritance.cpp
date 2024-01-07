@@ -2,8 +2,8 @@
  * A class will have a property and you ing=herit that property in another class.
  *There is a parent class and a sub/child class.
  * in mode of access: you cant acces any private variable in public class.
- *Private data member of any class is not accessible.
- */
+ *Private data member of any class is not acessible.
+*/
 
 //Implimentation:
 
