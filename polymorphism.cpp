@@ -1,22 +1,27 @@
 //************POLYMORPHISM*****************
 //compile time:
 //funtion overloading.
-//operator overloading
 
-//Function with default arguments can be called 2 or 3 or 4 arguments.
+
+
+//operator overloading
 #include<iostream>
 using namespace std;
 
-int add(int x, int y, int z=0, int w =0)
+class B
 {
-	return (x+y+z+w);
-}
+	public:
+	        void operator() ()
+		{
+			cout<< "HELLO BHOOMI" <<endl;
+                }
+};
 
 int main()
 {
-	cout << add(10,20) <<endl;
-	cout << add(10,20, 30) <<endl;
-	cout << add(10,20,30,40) <<endl;
+	B obj1;
+
+	obj1();
 	return 0;
 }
 
