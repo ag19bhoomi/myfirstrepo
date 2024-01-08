@@ -3,25 +3,25 @@
 //funtion overloading.
 //operator overloading
 
-//Function overloading with different no.s of arguments
+//Function overloading with different types of arguments
 #include<iostream>
 using namespace std;
-//Function with two parameters
+//Function with two integers parameters
 int add(int num1, int num2)
 {
 	return num1 + num2;
 }
 
-//function with three parameters
-int add(int num1 + num2 +num3)
+//Function with two double parameters
+double  add(double num1, double num2)
 {
-	return num1+num2+num3
+	return num1+num2;
 }
 
 int main()
 {
 	cout << add(10,20) <<endl;
-	cout << add(10,20,30);
+	cout << add(10.4,20.5) <<endl;
 	return 0;
 }
 
